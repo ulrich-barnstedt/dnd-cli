@@ -5,7 +5,7 @@ module.exports = class Layout {
         this.widget = blessed.layout({
             parent,
             top: 2,
-            left: 'center',
+            shrink : false,
             width: '100%',
             height: '100%-2',
             layout: 'inline',
@@ -13,15 +13,17 @@ module.exports = class Layout {
             style: {}
         });
 
-        this.onFocus = () => {};
+        this.onLoad = () => {};
+        this.onHide = () => {}
     }
 
     show () {
-        this.onFocus();
+        this.onLoad();
         this.widget.show();
     }
 
     hide () {
+        this.onHide();
         this.widget.hide();
     }
 }

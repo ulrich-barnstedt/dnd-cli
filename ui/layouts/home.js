@@ -3,7 +3,7 @@ const Box = require("../ui/box");
 
 const homeLayout = (parent) => {
     let layout = new Layout(parent);
-    let box = new Box(layout.widget, "home", "just a home box");
+    let box = new Box(layout.widget, {label : "home", content : "just a home box"});
 
     return layout;
 }

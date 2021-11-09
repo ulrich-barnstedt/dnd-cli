@@ -1,17 +1,11 @@
 const blessed = require("neo-blessed");
 
 module.exports = class Box {
-    constructor (parent, label, content, style = {}) {
+    constructor (parent, options) {
         this.widget = blessed.box({
             parent,
-            //top: "center",
-            //left: "center",
-            width: "50%",
-            //height: 10,
             border: 'line',
-            style,
-            label,
-            content
+            ...options
         })
     }
 
@@ -19,3 +13,12 @@ module.exports = class Box {
         this.widget.setContent(to);
     }
 }
+
+//scrollable : true,
+//style,
+//label,
+//content
+//top: "center",
+//left: "center",
+//width: "50%",
+//height: 10,

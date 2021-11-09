@@ -7,8 +7,8 @@ class SpellBookLayout {
         this.base = base;
         this.client = client;
 
-        this.mainBox = new Box(this.layout.widget, "Book", undefined, {border : {fg : "red"}});
-        this.layout.onFocus = this.loadData.bind(this);
+        this.mainBox = new Box(this.layout.widget, {label : "Book", style : {border : {fg : "red"}}});
+        this.layout.onLoad = this.loadData.bind(this);
 
         this.setup();
     }
