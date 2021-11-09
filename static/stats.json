@@ -1,0 +1,56 @@
+{
+  "stats" : {
+    "strength" : {
+      "base" : 11,
+      "modifier" : 0
+    },
+    "dexterity" : {
+      "base" : 13,
+      "modifier" : 1
+    },
+    "constitution" : {
+      "base" : 11,
+      "modifier" : 0
+    },
+    "intelligence" : {
+      "base" : 15,
+      "modifier" : 2
+    },
+    "wisdom" : {
+      "base" : 12,
+      "modifier" : 1
+    },
+    "charisma" : {
+      "base" : 8,
+      "modifier" : -1
+    }
+  },
+  "savingThrows" : {
+    "strength" : 0,
+    "dexterity" : 1,
+    "constitution" : 0,
+    "intelligence" : 4,
+    "wisdom" : 3,
+    "charisma" : -1
+  },
+  "skills" : {
+    "acrobatics" : 1,
+    "animalHandling" : 1,
+    "arcana" : 4,
+    "athletics" : 0,
+    "deception" : -1,
+    "history" : 2,
+    "insight" : 1,
+    "intimidation" : -1,
+    "investigation" : 2,
+    "medication" : 1,
+    "nature" : 2,
+    "perception" : 1,
+    "performance" : -1,
+    "persuasion" : -1,
+    "religion" : 4,
+    "sleightOfHand" : 1,
+    "stealth" : 1,
+    "survival" : 1
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "weapons" : [
+    {
+      "name" : "Quarterstaff",
+      "atkBonus" : 2,
+      "dmg" : "1d6",
+      "type" : "bludgeoning"
+    }
+  ],
+  "equipment" : [
+    {
+      "name" : "Arcane focus",
+      "amount" : 1
+    },
+    {
+      "name" : "Explorer's pack",
+      "amount" : 1
+    },
+    {
+      "name" : "Spellbook",
+      "amount" : 1
+    },
+    {
+      "name" : "Spirit bottle",
+      "amount" : 1
+    },
+    {
+      "name" : "Hellhound Head",
+      "amount" : 1
+    },
+    {
+      "name" : "Shield",
+      "amount" : 1
+    },
+    {
+      "name" : "Huge ass Orc Ear",
+      "amount" : 1
+    },
+    {
+      "name" : "Potion of healing (2d4 + 4)",
+      "amount" : 1
+    },
+    {
+      "name" : "Potion of Heroism (temp. 10 (1h))",
+      "amount" : 1
+    },
+    {
+      "name" : "Horse",
+      "amount" : 1
+    },
+    {
+      "name" : "Food",
+      "amount" : 20
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "spellBook" : [
+    [
+      "Poison Spray",
+      "Firebolt",
+      "Ray of Frost",
+      "True Strike",
+      "Message"
+    ],
+    [
+      "Identify",
+      "Magic Missile",
+      "Shield",
+      "Comprehend Language",
+      "False Life",
+      "Expeditious Retreat"
+    ],
+    [
+      "Invisibility",
+      "Misty Step",
+      "Mirror Image",
+      "Rope Trick"
+    ],
+    [
+      "Fireball"
+    ]
+  ],
+  "equipped" : {
+    "total" : 4,
+    "current" : []
+  },
+  "spellCastingAbility" : "Intelligence",
+  "spellSaveDC" : 12,
+  "spellAttackBonus" : 4,
+  "spellSlots" : [
+    {
+      "max" : 0,
+      "current" : 0
+    },
+    {
+      "max" : 3,
+      "current" : 3
+    },
+    {
+      "max" : 0,
+      "current" : 0
+    },
+    {
+      "max" : 0,
+      "current" : 0
+    },
+    {
+      "max" : 0,
+      "current" : 0
+    },
+    {
+      "max" : 0,
+      "current" : 0
+    },
+    {
+      "max" : 0,
+      "current" : 0
+    },
+    {
+      "max" : 0,
+      "current" : 0
+    },
+    {
+      "max" : 0,
+      "current" : 0
+    },
+    {
+      "max" : 0,
+      "current" : 0
+    }
+  ]
+}
