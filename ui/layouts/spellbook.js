@@ -1,26 +1,19 @@
-const Layout = require("../ui/layout");
 const Box = require("../ui/box");
+const LayoutHelper = require("../utils/layoutHelper");
 
-class SpellBookLayout {
-    constructor (base, client) {
-        this.layout = new Layout(base.screen);
-        this.base = base;
-        this.client = client;
-
+class SpellBookLayout extends LayoutHelper {
+    setupUI () {
         this.mainBox = new Box(this.layout.widget, {label : "Book", style : {border : {fg : "red"}}});
-        this.layout.onLoad = this.loadData.bind(this);
-
-        this.setup();
     }
 
-    setup () {
+    genericSetup () {
         this.client.onDataUpdate("totalSpellList", (d) => {
             this.mainBox.setContent(d.spells.map(a => a.name).join("\n"));
             this.base.render();
         })
     }
 
-    loadData () {
+    onLoad () {
         this.client.requestMissing("totalSpellList");
     }
 }

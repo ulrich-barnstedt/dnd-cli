@@ -14,6 +14,15 @@ module.exports = class Box {
     }
 }
 
+/*style : {
+    border : {
+        fg : "red"
+    },
+    label : {
+        fg : "red"
+    }
+},*/
+
 //scrollable : true,
 //style,
 //label,

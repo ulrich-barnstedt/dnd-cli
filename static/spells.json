@@ -29,9 +29,6 @@
     "total" : 4,
     "current" : []
   },
-  "spellCastingAbility" : "Intelligence",
-  "spellSaveDC" : 12,
-  "spellAttackBonus" : 4,
   "spellSlots" : [
     {
       "max" : 0,
@@ -73,5 +70,8 @@
       "max" : 0,
       "current" : 0
     }
-  ]
+  ],
+  "spellCastingAbility" : "Intelligence",
+  "spellSaveDC" : 12,
+  "spellAttackBonus" : 4
 }
