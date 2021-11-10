@@ -10,6 +10,6 @@ let baseUI = new Base(["&", "Home", "Equipment", "Spellbook", "Features", "Quit"
 let layoutManager = new LayoutManager(baseUI);
 
 layoutManager.registerLayout("&", DefaultLayout(baseUI, client));
-layoutManager.registerLayout("Home", HomeLayout(baseUI.screen, client));
+layoutManager.registerLayout("Home", HomeLayout(baseUI, client));
 layoutManager.registerLayout("Spellbook", SpellBookLayout(baseUI, client));
 layoutManager.changeLoadedLayout("&");

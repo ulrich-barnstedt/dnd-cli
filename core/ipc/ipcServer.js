@@ -4,7 +4,7 @@ const RegisteredClient = require("./registeredClient");
 ipc.config.appspace = "dnd.";
 ipc.config.id = "server"
 ipc.config.logDepth = 2;
-//ipc.config.logger = () => {};
+ipc.config.logger = () => {};
 
 module.exports = class IPCServer {
     constructor (dataClass) {
