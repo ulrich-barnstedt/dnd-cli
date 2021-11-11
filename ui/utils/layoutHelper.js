@@ -11,8 +11,14 @@ module.exports = class LayoutHelper {
 
         this.setupUI();
         this.genericSetup();
-        this.client.onDataUpdate("base", this.onData.bind(this));
 
+        let keys = Object.getOwnPropertyNames(this.constructor.prototype);
+        for (let element of keys) {
+            if (!element.startsWith("onData_")) continue;
+            let type = element.replace("onData_", "");
+
+            this.client.onDataUpdate(type, this[element].bind(this));
+        }
     }
 
     genericSetup () {}
@@ -22,6 +28,4 @@ module.exports = class LayoutHelper {
     onLoad () {}
 
     onHide () {}
-
-    onData () {}
 }

@@ -31,20 +31,11 @@ class HomeLayout extends elements.LayoutHelper {
             }),
             //TODO: change to list render
             // - format for spell slots: current / total
-            /*spellSlots : new elements.ObjectMapper(this.layout.widget, {
+            spellSlots : new elements.List(this.layout.widget, {
                 label : "Spell slots"
-            }, {
-                1 : "[1]",
-                2 : "[2]",
-                3 : "[3]",
-                4 : "[4]",
-                5 : "[5]",
-                6 : "[6]",
-                7 : "[7]",
-                8 : "[8]",
-                9 : "[9]",
-            }),
-            equippedSpells : new Box(this.layout.widget, {
+            }, element => `${element.current} / ${element.max}`, {dataColor : "green"}),
+            //TODO: map somehow
+            /*equippedSpells : new Box(this.layout.widget, {
                 label : "Equipped spells",
                 padding : {
                     top : 1,
@@ -71,20 +62,6 @@ class HomeLayout extends elements.LayoutHelper {
             }, {
                 tagColor : "green"
             }),
-            //TODO: move to stats page to make home less cramped?
-            meta : new elements.ObjectMapper (this.layout.widget, {
-                label : "Meta",
-            }, {
-                age : "Age",
-                eyes : "Eye color",
-                height : "Height",
-                hair : "Hair color",
-                skin : "Skin color",
-                design : "Design inspiration"
-            }, {
-                tagColor : "blue",
-                dataColor : "green"
-            }),
             spellMeta : new elements.ObjectMapper(this.layout.widget, {
                 label : "Spellcasting Info"
             }, {
@@ -92,15 +69,15 @@ class HomeLayout extends elements.LayoutHelper {
                 spellSaveDC : "Spell save difficulty",
                 spellAttackBonus : "Spell attack bonus"
             }, {
-                tagColor : "green"
+                tagColor : "blue",
+                dataColor : "green"
             })
         }
     }
 
     //TODO: general list
-    // - create list render
-    // - rename boxed object mapper to objectBox
-    // - add spells as data source to this page and render missing boxes from there
+    // - implement spell index system and port data
+    // - implement current spells on this page using index system
     // - implement other pages
     // - implement subcommand system
     // - implement total command functionality
@@ -118,19 +95,22 @@ class HomeLayout extends elements.LayoutHelper {
         this.client.unsubscribe("spells");
     }
 
-    onData ({data}) {
-        //TODO: check if either of data sources is undefined
-        if (this.client)
+    onData_spells ({data : spells}) {
+        this.boxes.spellSlots.setContent(spells.spellSlots);
+        this.boxes.spellMeta.setContent(spells);
 
-        this.boxes.classLvl.setContent(data);
-        this.boxes.funds.setContent({...data, displayedIn : "GP"});
+        this.base.render();
+    }
+
+    onData_base ({data : base}) {
+        this.boxes.classLvl.setContent(base);
+        this.boxes.funds.setContent({...base, displayedIn : "GP"});
         this.boxes.hp.setContent({
-            ...data.hp,
-            status : data.hp.currentHp > 0 ? "Normal" : "{bold}{blink}CRITICAL{/blink}{/bold}",
-            totalHp : data.hp.currentHp + data.hp.temporaryHp
+            ...base.hp,
+            status : base.hp.currentHp > 0 ? "Normal" : "{bold}{blink}CRITICAL{/blink}{/bold}",
+            totalHp : base.hp.currentHp + base.hp.temporaryHp
         });
-        this.boxes.meta.setContent(data.meta);
-        this.boxes.character.setContent(data);
+        this.boxes.character.setContent(base);
 
         this.base.render();
     }

@@ -31,8 +31,8 @@
   },
   "spellSlots" : [
     {
-      "max" : 0,
-      "current" : 0
+      "max" : "∞",
+      "current" : "∞"
     },
     {
       "max" : 3,

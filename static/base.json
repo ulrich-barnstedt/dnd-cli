@@ -19,14 +19,5 @@
   "xp" : 400,
   "alignment" : "Chaotic Neutral",
   "race" : "High Elf",
-  "funds" : 112.8,
-  "meta" : {
-    "age" : 420,
-    "eyes" : "Blue",
-    "height" : 175,
-    "weight" : 55,
-    "hair" : "Black",
-    "skin" : "Alabaster",
-    "design" : "Moon Elf"
-  }
+  "funds" : 112.8
 }

@@ -52,5 +52,14 @@
     "sleightOfHand" : 1,
     "stealth" : 1,
     "survival" : 1
+  },
+  "meta" : {
+    "age" : 420,
+    "eyes" : "Blue",
+    "height" : 175,
+    "weight" : 55,
+    "hair" : "Black",
+    "skin" : "Alabaster",
+    "design" : "Moon Elf"
   }
 }

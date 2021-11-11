@@ -11,13 +11,16 @@ module.exports = class ListBox extends TextBox {
     constructor (parent,
                  options = {},
                  mappingFunction = (a) => {String(a)},
-                 colorOptions = {
-                    bracketColor : "blue", indexColor : "cyan", dataColor : "red"
-                 },
+                 colorOptions,
                  startingIndex = 0) {
         super(parent, options);
 
-        this.colorOptions = colorOptions;
+        this.colorOptions = {
+            bracketColor : "blue",
+            indexColor : "cyan",
+            dataColor : "red",
+            ...colorOptions
+        };
         this.mappingFunction = mappingFunction;
         this.startingIndex = startingIndex;
     }
