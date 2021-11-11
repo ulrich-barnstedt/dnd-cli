@@ -1,8 +1,8 @@
 module.exports = {
-    /*test : {
+    test : {
         aTest : true,
         bTest : true
-    },*/
+    },
     exit : true,
     help : true
 }

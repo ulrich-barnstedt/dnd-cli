@@ -1,5 +1,4 @@
-const Layout = require("../ui/layout");
-const Box = require("../ui/box");
+const elements = require("../ui/elements");
 const blessed = require("neo-blessed");
 
 const info = `{red-fg}{bold}D N D - 5 e{/bold}{/red-fg}
@@ -9,9 +8,9 @@ By 0x81 / Ulrich Barnstedt
 `;
 
 const defaultLayout = (base) => {
-    let layout = new Layout(base.screen);
+    let layout = new elements.Layout(base.screen);
 
-    let container = new Box(layout.widget, {
+    let container = new elements.Box(layout.widget, {
         border : undefined
     })
 
@@ -22,7 +21,7 @@ const defaultLayout = (base) => {
         height : "100%-2"
     })
 
-    let infoBox = new Box(container.widget, {
+    let infoBox = new elements.Box(container.widget, {
         tags : true,
         content : info,
         right : 0,

@@ -82,7 +82,7 @@ module.exports = class CLI {
         term.dim((new Date()).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}))
         term.dim(" [");
         term.yellow(this.server.dataClass.data.base.data.name.replace(/\W/g, "_") + "@5e ");
-        term.brightRed("-d.sh")
+        term.brightRed("-dshell")
         term.dim("] ").brightCyan("*$ ");
 
         term.inputField({

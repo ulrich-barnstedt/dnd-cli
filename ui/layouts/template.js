@@ -1,10 +1,7 @@
 const blessed = require("neo-blessed");
-const objectToStringMapper = require("../utils/objectToStringMapper");
-const Box = require("../ui/box");
-const LayoutHelper = require("../utils/layoutHelper");
-const BoxedObjectToStringMapper = require("../utils/boxedObjectToStringMapper");
+const elements = require("../ui/elements");
 
-class TemplateLayout extends LayoutHelper {}
+class TemplateLayout extends elements.LayoutHelper {}
 
 const templateLayout = (base, client) => {
     let templateLayout = new TemplateLayout(base, client);

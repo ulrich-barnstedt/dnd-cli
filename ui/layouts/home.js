@@ -1,11 +1,9 @@
-const Box = require("../ui/box");
-const LayoutHelper = require("../utils/layoutHelper");
-const BoxedObjectToStringMapper = require("../utils/boxedObjectToStringMapper");
+const elements = require("../ui/elements");
 
-class HomeLayout extends LayoutHelper {
+class HomeLayout extends elements.LayoutHelper {
     setupUI () {
         this.boxes = {
-            hp : new BoxedObjectToStringMapper(this.layout.widget, {
+            hp : new elements.ObjectMapper(this.layout.widget, {
                 label : "Health points"
             }, {
                 status : "Status",
@@ -14,7 +12,7 @@ class HomeLayout extends LayoutHelper {
                 temporaryHp : "Temporary HP",
                 totalHp : "Total currently available HP"
             }),
-            classLvl : new BoxedObjectToStringMapper(this.layout.widget, {
+            classLvl : new elements.ObjectMapper(this.layout.widget, {
                 label : "Class & Level"
             }, {
                 name : "Name",
@@ -22,7 +20,7 @@ class HomeLayout extends LayoutHelper {
                 xp : "XP",
                 class : "Class"
             }),
-            funds : new BoxedObjectToStringMapper(this.layout.widget, {
+            funds : new elements.ObjectMapper(this.layout.widget, {
                 label : "Funds"
             }, {
                 displayedIn : "Displayed in",
@@ -31,7 +29,9 @@ class HomeLayout extends LayoutHelper {
                 tagColor : "yellow",
                 dataColor : "green"
             }),
-            spellSlots : new BoxedObjectToStringMapper(this.layout.widget, {
+            //TODO: change to list render
+            // - format for spell slots: current / total
+            /*spellSlots : new elements.ObjectMapper(this.layout.widget, {
                 label : "Spell slots"
             }, {
                 1 : "[1]",
@@ -53,8 +53,8 @@ class HomeLayout extends LayoutHelper {
                     bottom : 1
                 },
                 width : "half"
-            }),
-            character : new BoxedObjectToStringMapper(this.layout.widget, {
+            }),*/
+            character : new elements.ObjectMapper(this.layout.widget, {
                 label : "Character"
             }, {
                 armorClass : "[AC] Armor Class",
@@ -71,7 +71,8 @@ class HomeLayout extends LayoutHelper {
             }, {
                 tagColor : "green"
             }),
-            meta : new BoxedObjectToStringMapper (this.layout.widget, {
+            //TODO: move to stats page to make home less cramped?
+            meta : new elements.ObjectMapper (this.layout.widget, {
                 label : "Meta",
             }, {
                 age : "Age",
@@ -84,7 +85,7 @@ class HomeLayout extends LayoutHelper {
                 tagColor : "blue",
                 dataColor : "green"
             }),
-            spellMeta : new BoxedObjectToStringMapper(this.layout.widget, {
+            spellMeta : new elements.ObjectMapper(this.layout.widget, {
                 label : "Spellcasting Info"
             }, {
                 spellCastingAbility : "Spell casting ability",
@@ -96,19 +97,31 @@ class HomeLayout extends LayoutHelper {
         }
     }
 
-    //funds box
-    //lvl and name box
+    //TODO: general list
+    // - create list render
+    // - rename boxed object mapper to objectBox
+    // - add spells as data source to this page and render missing boxes from there
+    // - implement other pages
+    // - implement subcommand system
+    // - implement total command functionality
+    // - test if subscription based updating sends only correct data
 
     onLoad () {
         this.client.subscribe("base");
+        this.client.subscribe("spells");
         this.client.requestData("base");
+        this.client.requestData("spells");
     }
 
     onHide () {
         this.client.unsubscribe("base");
+        this.client.unsubscribe("spells");
     }
 
     onData ({data}) {
+        //TODO: check if either of data sources is undefined
+        if (this.client)
+
         this.boxes.classLvl.setContent(data);
         this.boxes.funds.setContent({...data, displayedIn : "GP"});
         this.boxes.hp.setContent({

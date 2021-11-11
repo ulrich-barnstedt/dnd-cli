@@ -1,10 +1,9 @@
-const Layout = require("../ui/layout");
-const Box = require("../ui/box");
+const elements = require("../ui/elements");
 const blessed = require("neo-blessed");
 
 const equipmentLayout = (base, client) => {
-    let layout = new Layout(base.screen);
-    let box = new Box(layout.widget, {content : "equip"});
+    let layout = new elements.Layout(base.screen);
+    let box = new elements.Box(layout.widget, {content : "equip"});
 
     return layout;
 }

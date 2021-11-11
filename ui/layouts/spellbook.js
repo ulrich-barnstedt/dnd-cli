@@ -1,9 +1,8 @@
-const Box = require("../ui/box");
-const LayoutHelper = require("../utils/layoutHelper");
+const elements = require("../ui/elements");
 
-class SpellBookLayout extends LayoutHelper {
+class SpellBookLayout extends elements.LayoutHelper {
     setupUI () {
-        this.mainBox = new Box(this.layout.widget, {label : "Book", style : {border : {fg : "red"}}});
+        this.mainBox = new elements.Box(this.layout.widget, {label : "Book", style : {border : {fg : "red"}}});
     }
 
     genericSetup () {
