@@ -60,6 +60,14 @@
     "weight" : 55,
     "hair" : "Black",
     "skin" : "Alabaster",
-    "design" : "Moon Elf"
-  }
+    "design" : "Moon Elf",
+    "alignment" : "Chaotic Neutral",
+    "passiveWisdom" : 11
+  },
+  "features" : [
+    "Darkvision",
+    "Keen Senses",
+    "Trance",
+    "Fey Ancestry"
+  ]
 }

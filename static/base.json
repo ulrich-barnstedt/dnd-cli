@@ -12,12 +12,30 @@
     "currentCount" : 2
   },
   "proficiencyBonus" : 2,
-  "passiveWisdom" : 11,
   "name" : "Althea Elmhold",
   "class" : "Wizard",
   "level" : 2,
   "xp" : 400,
-  "alignment" : "Chaotic Neutral",
   "race" : "High Elf",
-  "funds" : 112.8
+  "funds" : 90.9,
+  "weapons" : [
+    {
+      "name" : "Quarterstaff",
+      "atkBonus" : 2,
+      "dmg" : "1d6",
+      "type" : "bludgeoning"
+    },
+    {
+      "name" : "Longbow",
+      "atkBonus" : 2,
+      "dmg" : "1d8",
+      "type" : "piercing"
+    },
+    {
+      "name" : "Sling",
+      "atkBonus" : 2,
+      "dmg" : "1d4",
+      "type" : "bludgeoning"
+    }
+  ]
 }

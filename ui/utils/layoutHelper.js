@@ -10,7 +10,6 @@ module.exports = class LayoutHelper {
         this.layout.onHide = this.onHide.bind(this);
 
         this.setupUI();
-        this.genericSetup();
 
         let keys = Object.getOwnPropertyNames(this.constructor.prototype);
         for (let element of keys) {
@@ -20,8 +19,6 @@ module.exports = class LayoutHelper {
             this.client.onDataUpdate(type, this[element].bind(this));
         }
     }
-
-    genericSetup () {}
 
     setupUI () {}
 

@@ -1,77 +1,92 @@
 {
-  "spellBook" : [
+  "spellbook": [
+    [],
     [
-      "Poison Spray",
-      "Firebolt",
-      "Ray of Frost",
-      "True Strike",
-      "Message"
+      46,
+      53,
+      70,
+      13,
+      29,
+      28
     ],
     [
-      "Identify",
-      "Magic Missile",
-      "Shield",
-      "Comprehend Language",
-      "False Life",
-      "Expeditious Retreat"
+      215,
+      294,
+      292,
+      310
     ],
     [
-      "Invisibility",
-      "Misty Step",
-      "Mirror Image",
-      "Rope Trick"
+      122
     ],
-    [
-      "Fireball"
-    ]
+    [],
+    [],
+    [],
+    [],
+    [],
+    []
   ],
-  "equipped" : {
-    "total" : 4,
-    "current" : []
-  },
-  "spellSlots" : [
+  "equipped": [
+    [
+      57,
+      32,
+      62,
+      81,
+      55
+    ],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    []
+  ],
+  "spellSlots": [
     {
-      "max" : "∞",
-      "current" : "∞"
+      "max": "∞",
+      "current": "∞"
     },
     {
-      "max" : 3,
-      "current" : 3
+      "max": 3,
+      "current": 3
     },
     {
-      "max" : 0,
-      "current" : 0
+      "max": 0,
+      "current": 0
     },
     {
-      "max" : 0,
-      "current" : 0
+      "max": 0,
+      "current": 0
     },
     {
-      "max" : 0,
-      "current" : 0
+      "max": 0,
+      "current": 0
     },
     {
-      "max" : 0,
-      "current" : 0
+      "max": 0,
+      "current": 0
     },
     {
-      "max" : 0,
-      "current" : 0
+      "max": 0,
+      "current": 0
     },
     {
-      "max" : 0,
-      "current" : 0
+      "max": 0,
+      "current": 0
     },
     {
-      "max" : 0,
-      "current" : 0
+      "max": 0,
+      "current": 0
     },
     {
-      "max" : 0,
-      "current" : 0
+      "max": 0,
+      "current": 0
     }
   ],
-  "spellCastingAbility" : "Intelligence",
-  "spellSaveDC" : 12,
-  "spellAttackBonus" : 4
+  "spellCastingAbility": "Intelligence",
+  "spellSaveDC": 12,
+  "spellAttackBonus": 4,
+  "maxEquippedSpells": 4
 }

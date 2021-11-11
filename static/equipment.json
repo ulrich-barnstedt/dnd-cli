@@ -1,56 +1,100 @@
 {
-  "weapons" : [
+  "equipment": [
     {
-      "name" : "Quarterstaff",
-      "atkBonus" : 2,
-      "dmg" : "1d6",
-      "type" : "bludgeoning"
+      "name": "Orb",
+      "amount": 1
+    },
+    {
+      "name": "Explorer's pack",
+      "amount": 1
+    },
+    {
+      "name": "Spellbook",
+      "amount": 1
+    },
+    {
+      "name": "Spirit bottle",
+      "amount": 1
+    },
+    {
+      "name": "Hellhound Head",
+      "amount": 1
+    },
+    {
+      "name": "Shield",
+      "amount": 1
+    },
+    {
+      "name": "Orog Ear",
+      "amount": 1
+    },
+    {
+      "name": "Potion of healing (2d4 + 4)",
+      "amount": 1
+    },
+    {
+      "name": "Potion of Heroism (temp. 10 (1h))",
+      "amount": 1
+    },
+    {
+      "name": "Horse",
+      "amount": 1
+    },
+    {
+      "name": "Food",
+      "amount": 6
+    },
+    {
+      "name" : "Quiver",
+      "amount" : 1
+    },
+    {
+      "name" : "Arrow",
+      "amount" : 100
+    },
+    {
+      "name" : "10ft. Pole",
+      "amount" : 1
+    },
+    {
+      "name" : "Piton",
+      "amount" : 5
+    },
+    {
+      "name" : "Cannabis (g)",
+      "amount" : 1
+    },
+    {
+      "name" : "Pipe",
+      "amount" : 1
+    },
+    {
+      "name" : "One day supply of pipe tobacco",
+      "amount" : 182
     }
   ],
-  "equipment" : [
-    {
-      "name" : "Arcane focus",
-      "amount" : 1
-    },
-    {
-      "name" : "Explorer's pack",
-      "amount" : 1
-    },
-    {
-      "name" : "Spellbook",
-      "amount" : 1
-    },
-    {
-      "name" : "Spirit bottle",
-      "amount" : 1
-    },
-    {
-      "name" : "Hellhound Head",
-      "amount" : 1
-    },
-    {
-      "name" : "Shield",
-      "amount" : 1
-    },
-    {
-      "name" : "Huge ass Orc Ear",
-      "amount" : 1
-    },
-    {
-      "name" : "Potion of healing (2d4 + 4)",
-      "amount" : 1
-    },
-    {
-      "name" : "Potion of Heroism (temp. 10 (1h))",
-      "amount" : 1
-    },
-    {
-      "name" : "Horse",
-      "amount" : 1
-    },
-    {
-      "name" : "Food",
-      "amount" : 20
-    }
+  "proficiencies": {
+    "armor": [
+      "None"
+    ],
+    "weapons": [
+      "Dagger",
+      "Dart",
+      "Sling",
+      "Quarterstaff",
+      "Light Crossbow",
+      "Longsword",
+      "Shortsword",
+      "Shortbow",
+      "Longbow"
+    ],
+    "tools" : [
+      "None"
+    ]
+  },
+  "languages" : [
+    "Elvish",
+    "Common",
+    "Halfing"
   ]
 }
