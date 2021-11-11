@@ -1,8 +1,8 @@
 module.exports = {
-    test : {
-        aTest : true,
-        bTest : true
-    },
     exit : true,
-    help : true
+    heal : {
+        max : true
+    },
+    dmg : true,
+    temp : true
 }

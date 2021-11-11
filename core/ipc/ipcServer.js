@@ -4,12 +4,12 @@ const RegisteredClient = require("./registeredClient");
 ipc.config.appspace = "dnd.";
 ipc.config.id = "server"
 ipc.config.logDepth = 2;
-//ipc.config.logger = () => {};
+ipc.config.logger = () => {};
 
 module.exports = class IPCServer {
     constructor (dataClass) {
         this.clients = {};
-        this.dataClass = dataClass;
+        this.data = dataClass;
 
         ipc.serve(() => {
             ipc.server.on("init", this.client_init.bind(this));
@@ -44,20 +44,24 @@ module.exports = class IPCServer {
     }
 
     client_requestData (data) {
-        let currentData = this.dataClass.data[data.type];
+        let currentData = this.data.data[data.type];
         this.clients[data.uuid].sendData(data.type, currentData);
     }
 
     // external methods
 
     server_triggerUpdate (type) {
-        let data = this.dataClass.data[type];
+        let data = this.data.data[type];
 
-        for (let key of this.clients) {
+        for (let key in this.clients) {
             let client = this.clients[key];
 
             if (!client.isSubscribed(type)) continue;
             client.sendData(type, data);
         }
+    }
+
+    TU (type) {
+        this.server_triggerUpdate(type);
     }
 };

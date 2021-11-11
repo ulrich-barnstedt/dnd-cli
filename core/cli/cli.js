@@ -11,6 +11,7 @@ term.on('key', function (name, matches, data) {
 module.exports = class CLI {
     constructor (server) {
         this.server = server;
+        this.data = server.data.data;
         this.history = [];
         this.commands = {};
 
@@ -70,7 +71,7 @@ module.exports = class CLI {
         command = command.toLowerCase();
 
         if (command in this.commands) {
-            this.commands[command].run(parts);
+            this.commands[command].run(parts, this.data, this.server);
         } else {
             this.cmdNotFound(command);
         }
@@ -81,7 +82,7 @@ module.exports = class CLI {
     inputField () {
         term.dim((new Date()).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}))
         term.dim(" [");
-        term.yellow(this.server.dataClass.data.base.data.name.replace(/\W/g, "_") + "@5e ");
+        term.yellow(this.server.data.data.base.data.name.replace(/\W/g, "_") + "@5e ");
         term.brightRed("-dshell")
         term.dim("] ").brightCyan("*$ ");
 

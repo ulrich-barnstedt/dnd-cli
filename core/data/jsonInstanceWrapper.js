@@ -11,6 +11,6 @@ module.exports = class JsonInstanceWrapper {
     }
 
     write () {
-        fs.writeSync(this.path, JSON.stringify(this.data, null, 2));
+        fs.writeFileSync(this.path, JSON.stringify(this.data, null, 2));
     }
 }

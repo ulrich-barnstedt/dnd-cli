@@ -1,41 +1,41 @@
 {
-  "armorClass" : 10,
-  "walkingSpeed" : 30,
-  "hp" : {
-    "maxHp" : 10,
-    "currentHp" : 10,
-    "temporaryHp" : 0
+  "armorClass": 10,
+  "walkingSpeed": 30,
+  "hp": {
+    "maxHp": 10,
+    "currentHp": 10,
+    "temporaryHp": 0
   },
-  "hitDice" : {
-    "size" : "1d6",
-    "maxCount" : 2,
-    "currentCount" : 2
+  "hitDice": {
+    "size": "1d6",
+    "maxCount": 2,
+    "currentCount": 2
   },
-  "proficiencyBonus" : 2,
-  "name" : "Althea Elmhold",
-  "class" : "Wizard",
-  "level" : 2,
-  "xp" : 400,
-  "race" : "High Elf",
-  "funds" : 90.9,
-  "weapons" : [
+  "proficiencyBonus": 2,
+  "name": "Althea Elmhold",
+  "class": "Wizard",
+  "level": 2,
+  "xp": 400,
+  "race": "High Elf",
+  "funds": 90.9,
+  "weapons": [
     {
-      "name" : "Quarterstaff",
-      "atkBonus" : 2,
-      "dmg" : "1d6",
-      "type" : "bludgeoning"
+      "name": "Quarterstaff",
+      "atkBonus": 2,
+      "dmg": "1d6",
+      "type": "bludgeoning"
     },
     {
-      "name" : "Longbow",
-      "atkBonus" : 2,
-      "dmg" : "1d8",
-      "type" : "piercing"
+      "name": "Longbow",
+      "atkBonus": 2,
+      "dmg": "1d8",
+      "type": "piercing"
     },
     {
-      "name" : "Sling",
-      "atkBonus" : 2,
-      "dmg" : "1d4",
-      "type" : "bludgeoning"
+      "name": "Sling",
+      "atkBonus": 2,
+      "dmg": "1d4",
+      "type": "bludgeoning"
     }
   ]
 }
