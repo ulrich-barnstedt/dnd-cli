@@ -1,5 +1,4 @@
 const term = require('terminal-kit').terminal;
-const commandMap = require("./commandMap");
 
 term.on('key', function (name, matches, data) {
     if (name === 'CTRL_C') {
@@ -14,6 +13,7 @@ module.exports = class CLI {
         this.data = server.data.data;
         this.history = [];
         this.commands = {};
+        this.commandMap = {};
 
         term.clear();
     }
@@ -23,7 +23,7 @@ module.exports = class CLI {
         let finished = components.slice(0, -1).map(a => a.toLowerCase());
         let completing = components[components.length - 1].toLowerCase();
 
-        let obj = commandMap;
+        let obj = this.commandMap;
         for (let key of finished) {
             if (typeof obj !== "object") return string;
             if (key in obj) {
@@ -52,15 +52,36 @@ module.exports = class CLI {
         }
     }
 
+    iterateCommandHierarchy (at) {
+        if (Object.keys(at.sub).length === 0) return true;
+        return Object.fromEntries(
+            Object.entries(at   .sub).map(([key, value]) => [key, this.iterateCommandHierarchy(value)])
+        );
+    }
+
     registerCommand (name, module) {
         this.commands[name] = module;
+        this.commandMap[name] = this.iterateCommandHierarchy(module);
     }
 
     cmdNotFound (command) {
         term("\n").red("The command " + command + " did not match any registered commands.")("\n");
     }
 
+    travelHierarchy (command, parts) {
+        let [current, ...remaining] = parts;
+
+        if (current in command.sub) {
+            this.travelHierarchy(command.sub[current], remaining);
+            return;
+        }
+
+        command.defaultRunner(parts, this.data, this.server);
+    }
+
     handleInput (error, input) {
+        if (error) throw error;
+
         if (!/\w/g.test(input)) {
             term("\n");
             return this.inputField();
@@ -71,7 +92,7 @@ module.exports = class CLI {
         command = command.toLowerCase();
 
         if (command in this.commands) {
-            this.commands[command].run(parts, this.data, this.server);
+            this.travelHierarchy(this.commands[command], parts);
         } else {
             this.cmdNotFound(command);
         }
@@ -88,7 +109,7 @@ module.exports = class CLI {
 
         term.inputField({
             autoCompleteMenu : true,
-            autoComplete : this.generatePrediction,
+            autoComplete : this.generatePrediction.bind(this),
             autoCompleteHint : true,
             history : this.history
         }, this.handleInput.bind(this));

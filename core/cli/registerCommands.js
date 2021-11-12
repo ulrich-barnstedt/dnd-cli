@@ -1,13 +1,11 @@
-const Heal = require("./commands/health/heal");
 const Exit = require("./commands/exit");
-const Dmg = require("./commands/health/dmg");
-const Temp = require("./commands/health/temp");
+const HP = require("./commands/health/hp");
+const Funds = require("./commands/funds/funds");
 
 const registerCommands = (cli) => {
     cli.registerCommand("exit", Exit);
-    cli.registerCommand("heal", Heal);
-    cli.registerCommand("dmg", Dmg);
-    cli.registerCommand("temp", Temp);
+    cli.registerCommand("hp", HP);
+    cli.registerCommand("funds", Funds);
 }
 
 module.exports = registerCommands;

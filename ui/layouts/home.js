@@ -79,9 +79,6 @@ class HomeLayout extends elements.LayoutHelper {
     }
 
     //TODO: general list
-    // - implement other pages
-    // - implement subcommand system
-    // - implement total command functionality
     // - test if subscription based updating sends only correct data
 
     onLoad () {

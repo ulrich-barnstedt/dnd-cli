@@ -1,9 +1,8 @@
 const term = require('terminal-kit').terminal;
 const Command = require("../../command");
-const SubcommandParser = require("../../subcommandParser");
 
 module.exports = new class extends Command {
-    wrappedRun (parts, data, server) {
+    defaultBehaviour (parts, data, server) {
         let health = +parts[0];
         if (health === 0 || isNaN(health)) return;
 
@@ -15,4 +14,4 @@ module.exports = new class extends Command {
         term("Added ").yellow(String(data.base.data.hp.temporaryHp - before))(" temporary HP.\n");
         server.TU("base");
     }
-}
+}(__filename);
