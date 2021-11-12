@@ -6,8 +6,10 @@ ipc.config.appspace = "dnd.";
 ipc.config.id = uuid;
 ipc.config.logger = () => {};
 
-module.exports = new class IPCClient {
-    constructor () {
+module.exports = class IPCClient {
+    constructor (base) {
+        this.base = base;
+
         ipc.connectTo("server", () => {
             ipc.of.server.on(
                 'connect',
@@ -15,6 +17,7 @@ module.exports = new class IPCClient {
             );
 
             ipc.of.server.on("data", this.event_handleData.bind(this));
+            ipc.of.server.on("disconnect", this.event_die.bind(this));
         });
 
         this.data = {};
@@ -28,6 +31,11 @@ module.exports = new class IPCClient {
         for (let fn of this.updateHandlers[data.type]) {
             fn(this.data[data.type]);
         }
+    }
+
+    event_die () {
+        this.base.screen.destroy();
+        process.exit();
     }
 
     onDataUpdate (type, fn) {
@@ -69,5 +77,4 @@ module.exports = new class IPCClient {
             }
         );
     }
-
-}();
+};

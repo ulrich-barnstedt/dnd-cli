@@ -21,10 +21,10 @@ class SpellBookLayout extends elements.LayoutHelper {
     }
 
     onData_spells ({data: spells}) {
-        this.boxes.spellbook.setContent(spells.spellbook.flat());
+        this.boxes.spellbook.setContent(spells.spellbook); // .sort((a, b) => b.level - a.level)
 
         let equipped = spells.equipped.flat();
-        for (let i = 0; i < spells.maxEquippedSpells; i++) {
+        for (let i = 0; i < spells.maxEquippedSpells - spells.equipped[1].length; i++) {
             equipped.push("mt");
         }
         this.boxes.equipped.setContent(equipped);

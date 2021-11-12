@@ -101,11 +101,11 @@ module.exports = class CLI {
     }
 
     inputField () {
-        term.dim((new Date()).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}))
-        term.dim(" [");
-        term.yellow(this.server.data.data.base.data.name.replace(/\W/g, "_") + "@5e ");
-        term.brightRed("-dshell")
-        term.dim("] ").brightCyan("*$ ");
+        term.italic.dim((new Date()).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}))
+        term.italic.dim(" [");
+        term.italic.yellow(this.server.data.data.base.data.name.replace(/\W/g, "_") + "@5e ");
+        term.italic.brightRed("-dshell")
+        term.italic.dim("] ").italic.brightCyan("*$ ");
 
         term.inputField({
             autoCompleteMenu : true,

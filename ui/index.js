@@ -1,4 +1,4 @@
-const client = require("./ipc/ipcClient");
+const Client = require("./ipc/ipcClient");
 const Base = require("./ui/base");
 const LayoutManager = require("./ui/layoutManager");
 
@@ -9,6 +9,7 @@ const EquipmentLayout = require("./layouts/equipment");
 const FeaturesLayout = require("./layouts/features");
 
 let baseUI = new Base(["&", "Home", "Equipment", "Spellbook", "Features", "Quit"]);
+let client = new Client(baseUI);
 let layoutManager = new LayoutManager(baseUI);
 
 layoutManager.registerLayout("&", DefaultLayout(baseUI, client));
