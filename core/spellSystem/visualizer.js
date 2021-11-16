@@ -8,7 +8,8 @@ module.exports = (so) => {
         ["Components", so.components.raw],
         ["Duration", so.duration],
         ["Range", so.range],
-        ["Description", so.description]
+        ["Description", so.description],
+        ["ID", so.id]
     ], {
         borderChars: 'lightRounded' ,
         borderAttr: { color: 'blue' } ,

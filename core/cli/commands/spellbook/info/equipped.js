@@ -1,3 +1,4 @@
+const visualizer = require("../../../../spellSystem/visualizer");
 const term = require('terminal-kit').terminal;
 const Command = require("../../../command");
 
@@ -7,16 +8,12 @@ module.exports = new class extends Command {
         let id = +parts[0];
         if (isNaN(id)) return;
 
-        if (id < 1 || id > 9) {
-            term.red("Invalid spell slots.\n");
+        let workingSet = dSpell.equipped.flat();
+        if (id < 0 || id >= workingSet.length) {
+            term.red("The spell could not be found.\n");
             return;
         }
 
-        dSpell.spellSlots[id].current = dSpell.spellSlots[id].max;
-
-        data.spells.write();
-        server.TU("spells");
-
-        term.green("Regenerated spell slot " + id + ".\n");
+        visualizer(workingSet[id]);
     }
 }(__filename);

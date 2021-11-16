@@ -16,7 +16,11 @@ module.exports = class LayoutHelper {
             if (!element.startsWith("onData_")) continue;
             let type = element.replace("onData_", "");
 
-            this.client.onDataUpdate(type, this[element].bind(this));
+            this.client.onDataUpdate(type, (d) => {
+                if (this.layout.hidden) return;
+
+                this[element](d);
+            });
         }
     }
 

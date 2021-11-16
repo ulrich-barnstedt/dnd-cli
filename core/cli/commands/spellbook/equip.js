@@ -2,8 +2,6 @@ const term = require('terminal-kit').terminal;
 const Command = require("../../command");
 const visualizer = require("../../../spellSystem/visualizer");
 
-// equip <targetSlot> <sbCommand>
-
 module.exports = new class extends Command {
     defaultBehaviour (parts, data, server) {
         let dSpell = data.spells.data;

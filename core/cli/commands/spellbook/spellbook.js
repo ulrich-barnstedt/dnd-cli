@@ -4,10 +4,11 @@ const Command = require("../../command");
 const cast = require("./cast");
 const equip = require("./equip");
 const unequip = require("./unequip");
-const info = require("./info");
+const info = require("./info/info");
 const learn = require("./learn");
-const unlearn = require("./unlearn");
+const delearn = require("./delearn");
 const spellslots = require("./spellslots/spellslots");
+const xcycle = require("./xcycle");
 
 module.exports = new class extends Command {
     registerSubcommands () {
@@ -17,8 +18,9 @@ module.exports = new class extends Command {
             unequip,
             info,
             learn,
-            unlearn,
-            ss : spellslots
+            delearn,
+            ss : spellslots,
+            xcycle
         };
     }
 }(__filename);
