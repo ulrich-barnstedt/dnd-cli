@@ -7,9 +7,9 @@
     "temporaryHp": 0
   },
   "hitDice": {
-    "size": "1d6",
+    "size": 6,
     "maxCount": 2,
-    "currentCount": 2
+    "currentCount": 1
   },
   "proficiencyBonus": 2,
   "name": "Althea Elmhold",

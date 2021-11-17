@@ -4,7 +4,6 @@ const Command = require("../../../command");
 module.exports = new class extends Command {
     defaultBehaviour (parts, data, server) {
         let dSpell = data.spells.data;
-        let offset = dSpell.equipped[0].length;
         let a = +parts[0];
         let b = +parts[1];
 
@@ -18,6 +17,6 @@ module.exports = new class extends Command {
         data.spells.write();
         server.TU("spells");
 
-        term.green("Set spell slot " + a + " to " + b + ".\n");
+        term.green("Set spell slot ").green(a)(" to ").green(b)(".\n");
     }
 }(__filename);

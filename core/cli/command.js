@@ -12,7 +12,16 @@ module.exports = class Command {
     }
 
     defaultBehaviour (params, data, server) {
-        term.red("Error parsing command in " + this.file)("\n");
+        let keys = Object.keys(this.sub);
+
+        if (keys.length > 0) {
+            term.yellow("This command cannot be executed directly. Try a subcommand?\n");
+            for (let key of keys) {
+                term.yellow(" - " + key + "\n");
+            }
+        } else {
+            term.red("Command in file " + this.file + " has no valid behaviour.")("\n");
+        }
     }
 
     registerSubcommands () {

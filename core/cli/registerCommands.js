@@ -2,10 +2,14 @@ const commands = {
     "util/exit" : "exit",
     "health/hp" : "hp",
     "funds/funds" : "funds",
-    "util/launch" : "launch",
+    "util/launch" : "launcher",
     "roll" : "roll",
-    "util/clear" : "clear",
-    "spellbook/spellbook" : "sb"
+    "util/clear" : "termclear",
+    "spellbook/spellbook" : "sb",
+    "spellbook/cast" : "cast",
+    "rest/rest" : "playerrest",
+    "attack/attack" : "attack",
+    "explain/explain" : "xplain"
 };
 
 const registerCommands = (cli) => {

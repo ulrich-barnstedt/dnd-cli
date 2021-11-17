@@ -46,7 +46,7 @@ class HomeLayout extends elements.LayoutHelper {
 
             weapons : new elements.List(this.layout.widget, {
                 label : "Weapons"
-            }, element => `${element.name} (${element.dmg}+${element.atkBonus} ${element.type})`, {dataColor : "yellow"}),
+            }, element => `${element.name} (${element.dmg} ${element.type}) (+${element.atkBonus})`, {dataColor : "yellow"}),
 
             character : new elements.ObjectMapper(this.layout.widget, {
                 label : "Character"
@@ -109,7 +109,7 @@ class HomeLayout extends elements.LayoutHelper {
             status : base.hp.currentHp > 0 ? "Normal" : "{bold}{blink}CRITICAL{/blink}{/bold}",
             totalHp : base.hp.currentHp + base.hp.temporaryHp
         });
-        this.boxes.character.setContent(base);
+        this.boxes.character.setContent({...base, hitDice : {...base.hitDice, size : "1d" + base.hitDice.size}});
         this.boxes.weapons.setContent(base.weapons);
 
         this.base.render();

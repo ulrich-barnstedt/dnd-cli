@@ -86,7 +86,7 @@ module.exports = class CLI {
             term("\n");
             return this.inputField();
         }
-        this.history.push(input);
+        if (this.history[this.history.length - 1] !== input) this.history.push(input);
 
         let [command, ...parts] = input.split(" ");
         command = command.toLowerCase();
@@ -101,11 +101,11 @@ module.exports = class CLI {
     }
 
     inputField () {
-        term.italic.dim((new Date()).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}))
-        term.italic.dim(" [");
-        term.italic.yellow(this.server.data.data.base.data.name.replace(/\W/g, "_") + "@5e ");
-        term.italic.brightRed("-dshell")
-        term.italic.dim("] ").italic.brightCyan("*$ ");
+        term.dim((new Date()).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}))
+        term.dim(" [");
+        term.italic.brightMagenta(this.server.data.data.base.data.name.replace(/\W/g, "_") + "@5e ");
+        term.italic.brightBlue("-dshell")
+        term.dim("] ").brightCyan("*$ ");
 
         term.inputField({
             autoCompleteMenu : true,

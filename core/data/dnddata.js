@@ -1,6 +1,7 @@
 const totalSpellList = require("./totalSpellList");
 const jsonWrapper = require("./jsonInstanceWrapper");
 const spellJsonWrapper = require("../spellSystem/spellJsonWrapper");
+const DiceHistory = require("./diceHistory");
 
 module.exports = new class DNDData {
     constructor () {
@@ -9,7 +10,8 @@ module.exports = new class DNDData {
             base : new jsonWrapper("./static/base.json"),
             equipment : new jsonWrapper("./static/equipment.json"),
             stats : new jsonWrapper("./static/stats.json"),
-            spells : new spellJsonWrapper("./static/spells.json", [["spellbook"], ["equipped"]])
+            spells : new spellJsonWrapper("./static/spells.json", [["spellbook"], ["equipped"]]),
+            diceHistory : new DiceHistory()
         }
     }
 

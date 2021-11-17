@@ -9,6 +9,7 @@ const learn = require("./learn");
 const delearn = require("./delearn");
 const spellslots = require("./spellslots/spellslots");
 const xcycle = require("./xcycle");
+const max = require("./max");
 
 module.exports = new class extends Command {
     registerSubcommands () {
@@ -20,7 +21,8 @@ module.exports = new class extends Command {
             learn,
             delearn,
             ss : spellslots,
-            xcycle
+            xcycle,
+            max
         };
     }
 }(__filename);

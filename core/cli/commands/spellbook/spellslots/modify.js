@@ -18,6 +18,6 @@ module.exports = new class extends Command {
         data.spells.write();
         server.TU("spells");
 
-        term.green("Set spell slot " + a + " maximum to " + b + ".\n");
+        term("Set spell slot ").green(a)(" maximum to ").green(b)(".\n");
     }
 }(__filename);

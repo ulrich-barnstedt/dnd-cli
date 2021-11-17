@@ -17,6 +17,6 @@ module.exports = new class extends Command {
         data.spells.write();
         server.TU("spells");
 
-        term.green("Regenerated spell slot " + id + ".\n");
+        term("Regenerated spell slot ").green(id)(".\n");
     }
 }(__filename);
