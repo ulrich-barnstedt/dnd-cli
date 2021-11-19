@@ -13,7 +13,11 @@ module.exports = new class extends Command {
         }
         term("Regenerated all spell slots.\n");
 
-        //TODO: set hit dice
+        data.base.data.hitDice.currentCount = Math.min(
+            data.base.data.hitDice.maxCount,
+            data.base.data.hitDice.currentCount + data.base.data.hitDice.maxCount / 2
+        );
+        term("Regenerated 50% of hit dice.\n");
 
         data.base.write();
         data.spells.write();

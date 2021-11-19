@@ -1,10 +1,6 @@
 {
   "equipment": [
     {
-      "name": "Orb",
-      "amount": 1
-    },
-    {
       "name": "Explorer's pack",
       "amount": 1
     },
@@ -45,32 +41,36 @@
       "amount": 6
     },
     {
-      "name" : "Quiver",
-      "amount" : 1
+      "name": "Quiver",
+      "amount": 1
     },
     {
-      "name" : "Arrow",
-      "amount" : 100
+      "name": "Arrow",
+      "amount": 100
     },
     {
-      "name" : "10ft. Pole",
-      "amount" : 1
+      "name": "10ft. Pole",
+      "amount": 1
     },
     {
-      "name" : "Piton",
-      "amount" : 5
+      "name": "Piton",
+      "amount": 5
     },
     {
-      "name" : "Cannabis (g)",
-      "amount" : 1
+      "name": "Cannabis (g)",
+      "amount": 1
     },
     {
-      "name" : "Pipe",
-      "amount" : 1
+      "name": "Pipe",
+      "amount": 1
     },
     {
-      "name" : "One day supply of pipe tobacco",
-      "amount" : 182
+      "name": "One day supply of pipe tobacco",
+      "amount": 182
+    },
+    {
+      "name": "Orb",
+      "amount": 1
     }
   ],
   "proficiencies": {
@@ -88,11 +88,11 @@
       "Shortbow",
       "Longbow"
     ],
-    "tools" : [
+    "tools": [
       "None"
     ]
   },
-  "languages" : [
+  "languages": [
     "Elvish",
     "Common",
     "Halfing"

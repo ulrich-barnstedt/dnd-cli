@@ -5,6 +5,8 @@ const registerCommands = require("./cli/registerCommands");
 
 dndData.loadAllData();
 
+const rpc = require("./rpc");
+
 let server = new Server(dndData);
 let cli = new CLI(server);
 

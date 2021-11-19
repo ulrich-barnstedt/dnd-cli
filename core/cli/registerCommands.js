@@ -8,8 +8,11 @@ const commands = {
     "spellbook/spellbook" : "sb",
     "spellbook/cast" : "cast",
     "rest/rest" : "playerrest",
-    "attack/attack" : "attack",
-    "explain/explain" : "xplain"
+    "weapons/attack" : "attack",
+    "weapons/weapons" : "weapons",
+    "explain/explain" : "xplain",
+    "inventory/inventory" : "inventory",
+    "savingThrows/savingThrows" : "throw"
 };
 
 const registerCommands = (cli) => {

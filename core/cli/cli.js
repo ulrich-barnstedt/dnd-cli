@@ -55,7 +55,7 @@ module.exports = class CLI {
     iterateCommandHierarchy (at) {
         if (Object.keys(at.sub).length === 0) return true;
         return Object.fromEntries(
-            Object.entries(at   .sub).map(([key, value]) => [key, this.iterateCommandHierarchy(value)])
+            Object.entries(at.sub).map(([key, value]) => [key, this.iterateCommandHierarchy(value)])
         );
     }
 
@@ -114,5 +114,4 @@ module.exports = class CLI {
             history : this.history
         }, this.handleInput.bind(this));
     }
-
 }
