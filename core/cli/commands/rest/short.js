@@ -33,7 +33,7 @@ module.exports = new class extends Command {
             .green(hp)
             (` hp with a new total of `)
             .green(data.base.data.hp.currentHp)
-            (`. (`).yellow(data.base.data.hitDice.currentCount)
+            (`. (`).yellow(String(data.base.data.hitDice.currentCount))
             (` hit dice left)\n`);
 
         data.base.write();

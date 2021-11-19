@@ -11,7 +11,7 @@ module.exports = (so) => {
         ["Description", so.description],
         ["ID", so.id]
     ], {
-        borderChars: 'lightRounded' ,
-        borderAttr: { color: 'blue' } ,
+        borderChars: 'lightRounded',
+        borderAttr: { color: 'blue' }
     });
 }

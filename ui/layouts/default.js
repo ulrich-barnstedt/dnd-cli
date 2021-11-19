@@ -1,9 +1,10 @@
 const elements = require("../ui/elements");
 const blessed = require("neo-blessed");
+const meta = require("../../meta");
 
 const info = `{red-fg}{bold}D N D - 5 e{/bold}{/red-fg}
 
-{yellow-fg}DND-CLI Beta{/yellow-fg}
+{yellow-fg}DND-CLI ${meta.version}{/yellow-fg}
 By 0x81 / Ulrich Barnstedt 
 `;
 

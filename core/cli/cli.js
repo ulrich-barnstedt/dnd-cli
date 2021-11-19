@@ -46,9 +46,9 @@ module.exports = class CLI {
             case 0:
                 return string;
             case 1:
-                return [...finished, possible[0]].join(" ");
+                return [...finished, possible[0], ""].join(" ");
             default:
-                return possible.map(ending => [...finished, ending].join(" "));
+                return possible.map(ending => [...finished, ending, ""].join(" "));
         }
     }
 
@@ -101,6 +101,7 @@ module.exports = class CLI {
     }
 
     inputField () {
+        //term("\n");
         term.dim((new Date()).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}))
         term.dim(" [");
         term.italic.brightMagenta(this.server.data.data.base.data.name.replace(/\W/g, "_") + "@5e ");

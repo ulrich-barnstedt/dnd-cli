@@ -3,6 +3,7 @@ const RPC = require("discord-rpc").Client;
 const client = new RPC({ transport: 'ipc' });
 const startTimestamp = new Date();
 const data = require("./data/dnddata");
+const meta = require("../meta");
 
 client.on("ready", () => {
     client.setActivity({
@@ -10,7 +11,7 @@ client.on("ready", () => {
         state: 'as ' + data.data.base.data.name,
         startTimestamp,
         largeImageKey: 'logo',
-        largeImageText: 'Beta Release 2',
+        largeImageText: meta.version,
         //smallImageKey: 'dice',
         //smallImageText: 'i am my own pillows',
         instance: false,
