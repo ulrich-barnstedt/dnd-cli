@@ -9,15 +9,15 @@
   "hitDice": {
     "size": 6,
     "maxCount": 2,
-    "currentCount": 1
+    "currentCount": 2
   },
   "proficiencyBonus": 2,
   "name": "Althea Elmhold",
   "class": "Wizard",
   "level": 2,
-  "xp": 400,
+  "xp": 531.25,
   "race": "High Elf",
-  "funds": 90.9,
+  "funds": 85.9,
   "weapons": [
     {
       "name": "Quarterstaff",

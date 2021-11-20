@@ -6,7 +6,7 @@ module.exports = new class extends Command {
         let health = +parts[0];
         if (health === 0 || isNaN(health)) return;
 
-        data.base.data.hp.currentHp -= (health - data.base.data.hp.temporaryHp);
+        data.base.data.hp.currentHp -= Math.max(health - data.base.data.hp.temporaryHp, 0);
         data.base.data.hp.temporaryHp = Math.max(data.base.data.hp.temporaryHp - health, 0);
 
         data.base.write();

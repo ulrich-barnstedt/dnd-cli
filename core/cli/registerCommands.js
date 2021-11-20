@@ -10,9 +10,10 @@ const commands = {
     "rest/rest" : "playerrest",
     "weapons/attack" : "attack",
     "weapons/weapons" : "weapons",
-    "explain/explain" : "xplain",
+    "explain/explain" : "describe",
     "inventory/inventory" : "inventory",
-    "savingThrows/savingThrows" : "throw"
+    "savingThrows/savingThrows" : "throw",
+    "xp/xp" : "xp"
 };
 
 const registerCommands = (cli) => {

@@ -26,11 +26,11 @@
     },
     {
       "name": "Potion of healing (2d4 + 4)",
-      "amount": 1
+      "amount": 2
     },
     {
       "name": "Potion of Heroism (temp. 10 (1h))",
-      "amount": 1
+      "amount": 2
     },
     {
       "name": "Horse",
@@ -38,7 +38,7 @@
     },
     {
       "name": "Food",
-      "amount": 6
+      "amount": 4
     },
     {
       "name": "Quiver",
@@ -66,11 +66,27 @@
     },
     {
       "name": "One day supply of pipe tobacco",
-      "amount": 182
+      "amount": 181
     },
     {
       "name": "Orb",
       "amount": 1
+    },
+    {
+      "name": "Blue Pseudogard Head",
+      "amount": 1
+    },
+    {
+      "name": "Nice fucking staff",
+      "amount": 1
+    },
+    {
+      "name": "Wizard Scroll",
+      "amount": 1
+    },
+    {
+      "name": "Owl Feather",
+      "amount": 99
     }
   ],
   "proficiencies": {
