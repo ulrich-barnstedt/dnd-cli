@@ -1,3 +1,3 @@
 module.exports = {
-    version : "Beta Release 15"
+    version : "Gamma Pre-Release 1"
 }

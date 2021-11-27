@@ -38,7 +38,7 @@
     },
     {
       "name": "Food",
-      "amount": 4
+      "amount": 18
     },
     {
       "name": "Quiver",
@@ -87,6 +87,14 @@
     {
       "name": "Owl Feather",
       "amount": 99
+    },
+    {
+      "name": "Coat",
+      "amount": 1
+    },
+    {
+      "name": "Blue guy eyes",
+      "amount": 2
     }
   ],
   "proficiencies": {

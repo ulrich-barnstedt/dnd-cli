@@ -18,4 +18,4 @@ client.on("ready", () => {
     });
 });
 
-client.login({clientId : clientID});
+client.login({clientId : clientID}).catch(() => {});

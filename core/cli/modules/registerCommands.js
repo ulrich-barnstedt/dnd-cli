@@ -13,14 +13,15 @@ const commands = {
     "explain/explain" : "describe",
     "inventory/inventory" : "inventory",
     "savingThrows/savingThrows" : "throw",
-    "xp/xp" : "xp"
+    "xp/xp" : "xp",
+    "help" : "help"
 };
 
 const registerCommands = (cli) => {
     let entries = Object.entries(commands);
 
     for (let [path, name] of entries) {
-        cli.registerCommand(name, require("./commands/" + path));
+        cli.registerCommand(name, require("../commands/" + path));
     }
 }
 
