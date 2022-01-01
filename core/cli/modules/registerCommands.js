@@ -3,7 +3,7 @@ const commands = {
     "health/hp" : "hp",
     "funds/funds" : "funds",
     "util/launch" : "launcher",
-    "roll" : "roll",
+    "util/roll" : "roll",
     "util/clear" : "termclear",
     "spellbook/spellbook" : "sb",
     "spellbook/cast" : "cast",
@@ -14,7 +14,8 @@ const commands = {
     "inventory/inventory" : "inventory",
     "savingThrows/savingThrows" : "throw",
     "xp/xp" : "xp",
-    "help" : "help"
+    "util/help" : "help",
+    "util/calculate" : "value"
 };
 
 const registerCommands = (cli) => {

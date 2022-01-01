@@ -1,10 +1,11 @@
 const term = require('terminal-kit').terminal;
-const Command = require("../modules/command2");
-const diceRoller = require("../../utils/diceRoller");
-const {longStr, str, num} = require("../modules/typeGenerators");
+const Command = require("../../modules/command2");
+const diceRoller = require("../../../utils/diceRoller");
+const {longStr, str, num} = require("../../modules/typeGenerators");
 
 module.exports = new class extends Command {
     types = [longStr("rollString", "")];
+    desc = "Roll some dice"
 
     defaultBehaviour ([str], data) {
         if (str.length === 0) return;

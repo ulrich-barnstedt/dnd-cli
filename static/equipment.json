@@ -5,15 +5,7 @@
       "amount": 1
     },
     {
-      "name": "Spellbook",
-      "amount": 1
-    },
-    {
       "name": "Spirit bottle",
-      "amount": 1
-    },
-    {
-      "name": "Hellhound Head",
       "amount": 1
     },
     {
@@ -29,16 +21,8 @@
       "amount": 2
     },
     {
-      "name": "Potion of Heroism (temp. 10 (1h))",
-      "amount": 2
-    },
-    {
-      "name": "Horse",
-      "amount": 1
-    },
-    {
       "name": "Food",
-      "amount": 18
+      "amount": 30
     },
     {
       "name": "Quiver",
@@ -46,15 +30,11 @@
     },
     {
       "name": "Arrow",
-      "amount": 100
+      "amount": 109
     },
     {
       "name": "10ft. Pole",
       "amount": 1
-    },
-    {
-      "name": "Piton",
-      "amount": 5
     },
     {
       "name": "Cannabis (g)",
@@ -69,24 +49,12 @@
       "amount": 181
     },
     {
-      "name": "Orb",
-      "amount": 1
-    },
-    {
-      "name": "Blue Pseudogard Head",
-      "amount": 1
-    },
-    {
       "name": "Nice fucking staff",
       "amount": 1
     },
     {
-      "name": "Wizard Scroll",
-      "amount": 1
-    },
-    {
       "name": "Owl Feather",
-      "amount": 99
+      "amount": 96
     },
     {
       "name": "Coat",
@@ -94,7 +62,79 @@
     },
     {
       "name": "Blue guy eyes",
+      "amount": 4
+    },
+    {
+      "name": "Saddle",
+      "amount": 1
+    },
+    {
+      "name": "Riding Gear",
+      "amount": 1
+    },
+    {
+      "name": "Scrolls",
       "amount": 2
+    },
+    {
+      "name": "Potion of healing (4d6)",
+      "amount": 1
+    },
+    {
+      "name": "Dank ash staff",
+      "amount": 1
+    },
+    {
+      "name": "Spellbook",
+      "amount": 1
+    },
+    {
+      "name": "Hellhound eyes",
+      "amount": 2
+    },
+    {
+      "name": "Writing equipment",
+      "amount": 1
+    },
+    {
+      "name": "2M Copper",
+      "amount": 1
+    },
+    {
+      "name": "Ring of spell storing (L2)",
+      "amount": 1
+    },
+    {
+      "name": "Holy pot",
+      "amount": 1
+    },
+    {
+      "name": "Piton",
+      "amount": 5
+    },
+    {
+      "name": "Herbs",
+      "amount": 5
+    },
+    {
+      "name": "Very nice Belt",
+      "amount": 1
+    },
+    {
+      "name": "Hobgoblin Eye",
+      "amount": 12
+    },
+    {
+      "name": "Goblin eyes",
+      "amount": 38
+    },
+    {
+      "name": "Modded Bugbear eyes",
+      "amount": 2
+    },
+    {
+      "name": "Very nice gürtel",
+      "amount": 1
     }
   ],
   "proficiencies": {

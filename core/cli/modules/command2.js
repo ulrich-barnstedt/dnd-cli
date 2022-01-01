@@ -5,6 +5,7 @@ module.exports = class Command2 {
     sub = {};
     types = [];
     mod = [];
+    desc = "Default description."
 
     constructor (file) {
         this.file = file;

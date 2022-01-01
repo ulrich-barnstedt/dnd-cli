@@ -1,8 +1,10 @@
 const term = require('terminal-kit').terminal;
-const Command = require("../../command");
+const Command = require("../../modules/command2");
 
 module.exports = new class extends Command {
-    defaultBehaviour (parts, data, server) {
+    desc = "Display info about dice rolls";
+
+    defaultBehaviour (params, data) {
         term("Last 5 dice rolls (desc.):\n");
 
         if (data.diceHistory.history.length === 0) {

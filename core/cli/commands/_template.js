@@ -6,6 +6,7 @@ module.exports = new class extends Command {
     sub = {};
     types = [];
     mod = [];
+    desc = "";
 
     defaultBehaviour (params, data) {
 
