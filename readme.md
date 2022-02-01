@@ -4,7 +4,7 @@
 ![Lines of code](https://img.shields.io/tokei/lines/github/ulrich-barnstedt/dnd-cli)
 ![GitHub top language](https://img.shields.io/github/languages/top/ulrich-barnstedt/dnd-cli)
 
-A stat tracker for DND, on the CLI.  
+A stat tracker for DND, on the terminal.  
 **WIP and not for production use.**
 
 ### Screenshots
