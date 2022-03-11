@@ -44,11 +44,11 @@
     "intimidation" : -1,
     "investigation" : 2,
     "medication" : 1,
-    "nature" : 2,
-    "perception" : 1,
+    "nature" : 4,
+    "perception" : 3,
     "performance" : -1,
     "persuasion" : -1,
-    "religion" : 4,
+    "religion" : 2,
     "sleightOfHand" : 1,
     "stealth" : 1,
     "survival" : 1
@@ -68,6 +68,7 @@
     "Darkvision",
     "Keen Senses",
     "Trance",
-    "Fey Ancestry"
+    "Fey Ancestry",
+    "Minor Conjuration"
   ]
 }

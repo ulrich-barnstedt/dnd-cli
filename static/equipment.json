@@ -5,14 +5,6 @@
       "amount": 1
     },
     {
-      "name": "Spirit bottle",
-      "amount": 1
-    },
-    {
-      "name": "Shield",
-      "amount": 1
-    },
-    {
       "name": "Orog Ear",
       "amount": 1
     },
@@ -30,7 +22,7 @@
     },
     {
       "name": "Arrow",
-      "amount": 109
+      "amount": 128
     },
     {
       "name": "10ft. Pole",
@@ -74,7 +66,7 @@
     },
     {
       "name": "Scrolls",
-      "amount": 2
+      "amount": 3
     },
     {
       "name": "Potion of healing (4d6)",
@@ -117,16 +109,12 @@
       "amount": 5
     },
     {
-      "name": "Very nice Belt",
-      "amount": 1
-    },
-    {
       "name": "Hobgoblin Eye",
-      "amount": 12
+      "amount": 22
     },
     {
       "name": "Goblin eyes",
-      "amount": 38
+      "amount": 52
     },
     {
       "name": "Modded Bugbear eyes",
@@ -135,6 +123,30 @@
     {
       "name": "Very nice gürtel",
       "amount": 1
+    },
+    {
+      "name": "Magic Gürtel (1 AC)",
+      "amount": 1
+    },
+    {
+      "name": "Spirit bottle",
+      "amount": 1
+    },
+    {
+      "name": "Shield (+2 AC, 3 Block-charge, Heal on crit)",
+      "amount": 1
+    },
+    {
+      "name": "Orc eyes",
+      "amount": 32
+    },
+    {
+      "name": "Warg eyes",
+      "amount": 2
+    },
+    {
+      "name": "Human eyes",
+      "amount": 6
     }
   ],
   "proficiencies": {
