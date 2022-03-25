@@ -66,7 +66,7 @@
     },
     {
       "name": "Scrolls",
-      "amount": 3
+      "amount": 5
     },
     {
       "name": "Potion of healing (4d6)",
@@ -138,7 +138,7 @@
     },
     {
       "name": "Orc eyes",
-      "amount": 32
+      "amount": 46
     },
     {
       "name": "Warg eyes",
@@ -146,7 +146,15 @@
     },
     {
       "name": "Human eyes",
-      "amount": 6
+      "amount": 10
+    },
+    {
+      "name": "Horse eyes",
+      "amount": 4
+    },
+    {
+      "name": "Orc chief eyes",
+      "amount": 2
     }
   ],
   "proficiencies": {
@@ -171,6 +179,6 @@
   "languages": [
     "Elvish",
     "Common",
-    "Halfing"
+    "Orcish"
   ]
 }

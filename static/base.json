@@ -2,22 +2,22 @@
   "armorClass": 10,
   "walkingSpeed": 30,
   "hp": {
-    "maxHp": 12,
-    "currentHp": 9,
-    "temporaryHp": 2
+    "maxHp": 16,
+    "currentHp": 16,
+    "temporaryHp": 0
   },
   "hitDice": {
     "size": 6,
-    "maxCount": 3,
-    "currentCount": 3
+    "maxCount": 4,
+    "currentCount": 4
   },
   "proficiencyBonus": 2,
   "name": "Althea Elmhold",
   "class": "Wizard",
-  "level": 2,
-  "xp": 287.5,
+  "level": 3,
+  "xp": 4337.5,
   "race": "High Elf",
-  "funds": 903.75,
+  "funds": 919.75,
   "weapons": [
     {
       "name": "Quarterstaff",
